@@ -12,7 +12,7 @@ async function run() {
       console.log(prop)
     }
 
-    const newIssue = await octokit.issues.rest.create({
+    const newIssue = await octokit.issues.rest({
         repo: github.context.repo.repo,
         owner: github.context.repo.owner,
         title: issueTitle,
